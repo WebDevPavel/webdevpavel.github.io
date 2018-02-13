@@ -21,10 +21,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link href="css/animate.css" rel="stylesheet">
+
 </head>
 <body>
-	<!--Содержимое сайта-->
-    <header>
+ <header>
 	   <div class="container">
 		<div class="row">
 		 <div class="col-lg-7">
@@ -32,7 +32,7 @@
 		 </div>
 		 <div class="col-lg-5">
 		  	<p class="header-pretitle wow fadeInRightBig" data-wow-delay="0.1s">Веб-разработчик</p>	
-		  	<h1 class="header-title wow fadeInRightBig" data-wow-delay="0.2s"> Ярмолюк Павел</h1>
+		  	<h1 class="header-title wow fadeInRightBig" data-wow-delay="0.2s"><a name="head"></a> Ярмолюк Павел</h1>
 		  	<p class="header-subtitle wow fadeInRightBig" data-wow-delay="0.3s">Верстка на HTML/CSS<br>Разработка сайтов под ключ</p>
 		  	<div class="header-button-block wow fadeInRightBig" data-wow-delay="0.4s">
 
@@ -103,5 +103,25 @@
     <script>
     	new WOW().init();
     </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+<a href="#" class="scrollup">Наверх</a>
 </body>
 </html>
